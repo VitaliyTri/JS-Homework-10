@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main"></main>
+
+    <script src="data.js"></script>
+
+    <script>
+        const data = JSON.parse(jsonData);
+        console.log(data);
+        const mainEl = document.querySelector('.main');
+
+        data.forEach(element => {
+            const divEl = document.createElement('div');
+            divEl.classList.add('content');
+
+            const headerEl = document.createElement(`h1`);
+            headerEl.classList.add('header');
+            headerEl.textContent = element.name;
+
+            const imgEl = document.createElement(`img`);
+            imgEl.classList.add('image');
+            imgEl.src = element.image;
+
+            const idEl = document.createElement(`p`);
+            idEl.classList.add('par');
+            idEl.textContent = `ID - ${element.id}`;
+
+            const statusEl = document.createElement(`p`);
+            statusEl.classList.add('status');
+            statusEl.textContent = `Status - ${element.status}`;
+
+            const typeEl = document.createElement(`p`);
+            typeEl.classList.add('type');
+            typeEl.textContent = `Type - ${element.type}`;
+
+            const genderEl = document.createElement(`p`);
+            genderEl.classList.add('gender');
+            genderEl.textContent = `Gender - ${element.gender}`;
+
+            const speciesEl = document.createElement(`p`);
+            speciesEl.classList.add('species');
+            speciesEl.textContent = `Species - ${element.species}`;
+
+            mainEl.appendChild(divEl);
+            divEl.appendChild(headerEl);
+            divEl.appendChild(imgEl);
+            divEl.appendChild(idEl);
+            divEl.appendChild(statusEl);
+            divEl.appendChild(typeEl);
+            divEl.appendChild(genderEl);
+            divEl.appendChild(speciesEl);
+        });
+    </script>
+</body>
+</html>

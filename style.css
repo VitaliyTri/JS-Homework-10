@@ -1,0 +1,20 @@
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    background: url(https://www.kp.ru/putevoditel/serialy/wp-content/uploads/2019/11/Mortynight_Run.jpg);
+    padding: 50px;
+    
+}
+
+.content {
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: wheat;
+    padding: 16px;
+}
+
+.image{
+    border: 2px solid black;
+}
